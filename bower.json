@@ -1,0 +1,19 @@
+{
+  "name": "gregtandiono.github.io",
+  "version": "0.0.0",
+  "authors": [
+    "gregtandiono <gregtandiono@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "skeleton": "~2.0.4"
+  }
+}
