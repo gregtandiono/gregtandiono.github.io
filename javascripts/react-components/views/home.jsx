@@ -11,4 +11,12 @@ var Home = React.createClass({
   }
 });
 
+var Hero = React.createClass({
+  render: function() {
+    return (
+      <div className='hero'>
+      </div>
+    )
+  }
+});
 React.render(<Home />, document.getElementById('app'))

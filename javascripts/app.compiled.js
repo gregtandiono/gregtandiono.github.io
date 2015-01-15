@@ -14,6 +14,14 @@ var Home = React.createClass({displayName: "Home",
   }
 });
 
+var Hero = React.createClass({displayName: "Hero",
+  render: function() {
+    return (
+      React.createElement("div", {className: "hero"}
+      )
+    )
+  }
+});
 React.render(React.createElement(Home, null), document.getElementById('app'))
 
 },{"react":149,"underscore":150}],3:[function(require,module,exports){
