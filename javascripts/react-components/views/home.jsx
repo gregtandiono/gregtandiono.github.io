@@ -1,5 +1,6 @@
-var React = require('react')
-  , _     = require('underscore');
+var React    = require('react')
+  , velocity = require('velocity-animate')
+  , _        = require('underscore');
 
 var Home = React.createClass({
   render: function() {
@@ -19,4 +20,5 @@ var Hero = React.createClass({
     )
   }
 });
+
 React.render(<Home />, document.getElementById('app'))
