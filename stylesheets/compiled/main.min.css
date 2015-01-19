@@ -2,3 +2,9 @@ body,
 html {
   font-family: 'Open Sans';
 }
+section.hero {
+  width: 100%;
+}
+section.hero svg {
+  overflow: initial;
+}
