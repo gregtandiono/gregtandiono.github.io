@@ -1,5 +1,5 @@
 # Greg Tandiono
-## Full Stack Developer.
+## Developer, Writer, Musician, Gamer
 
 
 ### Skills

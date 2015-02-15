@@ -2,22 +2,21 @@ var React       = require('react')
   , svgInjector = require('svg-injector')
   , _           = require('underscore');
 
+
+/*
+ ** Load UI Partials
+ */
+
+var Header = require('../ui-partials/_header.jsx')
+  , Hero   = require('../ui-partials/_hero.jsx');
+
+
 var Home = React.createClass({
   render: function() {
     return (
-      <section className='hero' id='home'>
-        <div className='container'>
-          <AnimatedObj />
-        </div>
-      </section>
-    )
-  }
-});
-
-var Hero = React.createClass({
-  render: function() {
-    return (
-      <div className='hero'>
+      <div>
+        <Header />
+        <Hero />
       </div>
     )
   }

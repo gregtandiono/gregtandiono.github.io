@@ -1,6 +1,112 @@
+header {
+  padding-top: 20px;
+  color: white;
+  .logo {
+    font-size: 1.75rem;
+    font-family: @heading-font;
+    font-weight: 100;
+    text-transform: capitalize;
+    img {
+      width: 80%;
+    }
+  }
+  nav {
+    padding-top: 8px;
+  }
+  ul {
+    list-style: none;
+    display: inline-block;
+    &.social-media li a {
+      font-size: 2rem;
+      padding: 0 5px;
+      vertical-align: middle;
+    }
+    li {
+      display: inline-block;
+      a {
+        text-decoration: none;
+        text-transform: capitalize;
+        font-size: 1.25rem;
+        /*color: white;*/
+        color: @medium-grey;
+        display: inline-block;
+        padding: 0 10px;
+      }
+    }
+  }
+}
+
 section.hero {
   width: 100%;
+  background: #6C8084;
+  padding-top: 25px;
+  background-color: white;
+  #intro {
+    padding-top: 50px;
+    opacity: 0;
+  }
+  #intro-img {
+    opacity: 0;
+    svg {
+      display: block;
+      float: right;
+    }
+  }
+  h1 {
+    font-weight: 300;
+    font-family: @heading-font;
+    /*color: @off-white;*/
+    color: @medium-grey;
+  }
   svg {
     overflow: initial;
   }
+  p {
+    /*color: @off-white;*/
+    color: @medium-grey;
+    font-family: @main-font;
+    font-size: 1.75rem;
+    padding-top: 45px;
+  }
+}
+
+g {
+  &#react,
+  &#nodejs,
+  &#aws,
+  &#ansible,
+  &#boxes,
+  &#background {
+    opacity: 0;
+  }
+}
+
+g#boxes {
+  .animation(fade .5s forwards);
+  .animation-delay(.25s);
+}
+
+g#nodejs {
+  .animation(fade .5s forwards);
+  .animation-delay(.5s);
+}
+
+g#aws {
+  .animation(fade .5s forwards);
+  .animation-delay(.75s);
+}
+
+g#ansible {
+  .animation(fade .5s forwards);
+  .animation-delay(1s);
+}
+
+g#react {
+  .animation(fade .5s forwards);
+  .animation-delay(1.25s);
+}
+
+g#background {
+  .animation(fade .5s forwards);
+  .animation-delay(1.5s);
 }
