@@ -11,9 +11,7 @@ module.exports = React.createClass({
               <img src='/images/logo.svg' />
             </a>
           </div>
-          <div className='u-pull-right'>
-            <Navigation />
-          </div>
+          <Navigation />
         </div>
       </header>
     )

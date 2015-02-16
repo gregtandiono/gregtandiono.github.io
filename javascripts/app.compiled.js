@@ -47,9 +47,7 @@ module.exports = React.createClass({displayName: "exports",
               React.createElement("img", {src: "/images/logo.svg"})
             )
           ), 
-          React.createElement("div", {className: "u-pull-right"}, 
-            React.createElement(Navigation, null)
-          )
+          React.createElement(Navigation, null)
         )
       )
     )
