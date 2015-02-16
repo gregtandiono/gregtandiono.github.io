@@ -13,8 +13,22 @@ module.exports = function(grunt) {
       }
     },
 
+    m2j: {
+      release: {
+        options: {
+          minify: true,
+          width: 60
+        },
+        files: {
+          'javascripts/data/content.json': ['copy/**/*.md']
+        }
+      }
+    },
+
     react: {
-      files: 'javascripts/react-components/**/*.jsx',
+      files: [
+        'javascripts/react-components/**/*.jsx'
+      ],
       tasks: ['browserify']
     },
 
@@ -24,9 +38,16 @@ module.exports = function(grunt) {
         tasks: ['less']
       },
       react: {
-        files: ['javascripts/react-components/**/*.jsx'],
+        files: [
+          'javascripts/react-components/**/*.jsx',
+          'javascripts/data/content.json'
+        ],
         tasks: ['browserify']
       },
+      m2j: {
+        files: ['copy/**/*.md'],
+        tasks: ['m2j']
+      }
     },
 
     browserify: {
@@ -53,6 +74,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-react');
   grunt.loadNpmTasks('grunt-browserify');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-markdown-to-json-with-content');
 
-  grunt.registerTask('default', ['browserify', 'less', 'uglify']);
+  grunt.registerTask('default', ['m2j', 'browserify', 'less', 'uglify']);
 };

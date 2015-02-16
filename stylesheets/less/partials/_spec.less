@@ -53,20 +53,27 @@ section.hero {
     }
   }
   h1 {
-    font-weight: 300;
+    font-weight: bold;
     font-family: @heading-font;
-    /*color: @off-white;*/
     color: @medium-grey;
   }
   svg {
     overflow: initial;
   }
   p {
-    /*color: @off-white;*/
     color: @medium-grey;
     font-family: @main-font;
     font-size: 1.75rem;
     padding-top: 45px;
+  }
+}
+
+section#skills {
+  margin-top: 65px;
+  opacity: 0;
+  h2 {
+    font-size: 3.5rem;
+    color: @medium-grey;
   }
 }
 
@@ -83,30 +90,30 @@ g {
 
 g#boxes {
   .animation(fade .5s forwards);
-  .animation-delay(.25s);
+  .animation-delay(.2s);
 }
 
 g#nodejs {
   .animation(fade .5s forwards);
-  .animation-delay(.5s);
+  .animation-delay(.4s);
 }
 
 g#aws {
   .animation(fade .5s forwards);
-  .animation-delay(.75s);
+  .animation-delay(.6s);
 }
 
 g#ansible {
   .animation(fade .5s forwards);
-  .animation-delay(1s);
+  .animation-delay(.8s);
 }
 
 g#react {
   .animation(fade .5s forwards);
-  .animation-delay(1.25s);
+  .animation-delay(1s);
 }
 
 g#background {
   .animation(fade .5s forwards);
-  .animation-delay(1.5s);
+  .animation-delay(1.2s);
 }

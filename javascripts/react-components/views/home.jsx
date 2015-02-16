@@ -17,37 +17,27 @@ var Home = React.createClass({
       <div>
         <Header />
         <Hero />
+        <main className='container'>
+          <Biography />
+        </main>
       </div>
     )
   }
 });
 
-var AnimatedObj = React.createClass({
-  clickHandler: function() {
-    var mainObj = $('#animated-obj')
-      , bottomBox = $('g#bottom')
-      , middleBox = $('g#middle');
-
-    var animationSequence = [
-      { e: mainObj, p: { translateY: '60px' } },
-      { e: mainObj, p: { translateX: '60px' } },
-      { e: bottomBox, p: { translateY: '80px' } }
-    ];
-
-    $.Velocity.RunSequence(animationSequence);
-  },
+var Biography = React.createClass({
   componentDidMount: function() {
-    svgInjector($('.svg-inject'));
+    $('#skills').velocity(
+      {opacity: 1, translateY: '-15px'},
+      {delay: 1500}
+    )
   },
   render: function() {
     return (
-      <img
-        src='/images/boxes.svg'
-        onClick={this.clickHandler}
-        id='animated-obj'
-        ref='fucking'
-        className='svg-inject'
-      />
+      <section id='skills'>
+        <img id='me' src='/images/me.svg' className='center-element' />
+        <h2 className='text-align-center'>What I do.</h2>
+      </section>
     )
   }
 });

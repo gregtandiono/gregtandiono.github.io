@@ -1,5 +1,7 @@
 var React       = require('react')
-  , svgInjector = require('svg-injector');
+  , svgInjector = require('svg-injector')
+  , marked      = require('marked')
+  , _           = require('underscore');
 
 module.exports = React.createClass({
   render: function() {

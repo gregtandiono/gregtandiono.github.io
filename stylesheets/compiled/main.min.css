@@ -2,6 +2,14 @@ body,
 html {
   font-family: 'Open Sans';
 }
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Raleway';
+  font-weight: bold;
+}
 .horizontal-line-small {
   display: block;
   height: 5px;
@@ -16,6 +24,16 @@ html {
   background: #525252;
   vertical-align: middle;
   margin: 0 15px 0 10px;
+}
+.center-element {
+  display: block;
+  margin: 0 auto;
+}
+.text-align-center {
+  text-align: center;
+}
+.text-align-left {
+  text-align: left;
 }
 @keyframes fade {
   0% {
@@ -104,20 +122,26 @@ section.hero #intro-img svg {
   float: right;
 }
 section.hero h1 {
-  font-weight: 300;
+  font-weight: bold;
   font-family: 'Raleway';
-  /*color: @off-white;*/
   color: #525252;
 }
 section.hero svg {
   overflow: initial;
 }
 section.hero p {
-  /*color: @off-white;*/
   color: #525252;
   font-family: 'Open Sans';
   font-size: 1.75rem;
   padding-top: 45px;
+}
+section#skills {
+  margin-top: 65px;
+  opacity: 0;
+}
+section#skills h2 {
+  font-size: 3.5rem;
+  color: #525252;
 }
 g#react,
 g#nodejs,
@@ -133,11 +157,11 @@ g#boxes {
   -ms-animation: fade 0.5s forwards;
   -o-animation: fade 0.5s forwards;
   animation: fade 0.5s forwards;
-  -webkit-animation-delay: 0.25s;
-  -moz-animation-delay: 0.25s;
-  -ms-animation-delay: 0.25s;
-  -o-animation-delay: 0.25s;
-  animation-delay: 0.25s;
+  -webkit-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+  -ms-animation-delay: 0.2s;
+  -o-animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 g#nodejs {
   -webkit-animation: fade 0.5s forwards;
@@ -145,11 +169,11 @@ g#nodejs {
   -ms-animation: fade 0.5s forwards;
   -o-animation: fade 0.5s forwards;
   animation: fade 0.5s forwards;
-  -webkit-animation-delay: 0.5s;
-  -moz-animation-delay: 0.5s;
-  -ms-animation-delay: 0.5s;
-  -o-animation-delay: 0.5s;
-  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  -ms-animation-delay: 0.4s;
+  -o-animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 g#aws {
   -webkit-animation: fade 0.5s forwards;
@@ -157,13 +181,25 @@ g#aws {
   -ms-animation: fade 0.5s forwards;
   -o-animation: fade 0.5s forwards;
   animation: fade 0.5s forwards;
-  -webkit-animation-delay: 0.75s;
-  -moz-animation-delay: 0.75s;
-  -ms-animation-delay: 0.75s;
-  -o-animation-delay: 0.75s;
-  animation-delay: 0.75s;
+  -webkit-animation-delay: 0.6s;
+  -moz-animation-delay: 0.6s;
+  -ms-animation-delay: 0.6s;
+  -o-animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 g#ansible {
+  -webkit-animation: fade 0.5s forwards;
+  -moz-animation: fade 0.5s forwards;
+  -ms-animation: fade 0.5s forwards;
+  -o-animation: fade 0.5s forwards;
+  animation: fade 0.5s forwards;
+  -webkit-animation-delay: 0.8s;
+  -moz-animation-delay: 0.8s;
+  -ms-animation-delay: 0.8s;
+  -o-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+g#react {
   -webkit-animation: fade 0.5s forwards;
   -moz-animation: fade 0.5s forwards;
   -ms-animation: fade 0.5s forwards;
@@ -175,27 +211,15 @@ g#ansible {
   -o-animation-delay: 1s;
   animation-delay: 1s;
 }
-g#react {
-  -webkit-animation: fade 0.5s forwards;
-  -moz-animation: fade 0.5s forwards;
-  -ms-animation: fade 0.5s forwards;
-  -o-animation: fade 0.5s forwards;
-  animation: fade 0.5s forwards;
-  -webkit-animation-delay: 1.25s;
-  -moz-animation-delay: 1.25s;
-  -ms-animation-delay: 1.25s;
-  -o-animation-delay: 1.25s;
-  animation-delay: 1.25s;
-}
 g#background {
   -webkit-animation: fade 0.5s forwards;
   -moz-animation: fade 0.5s forwards;
   -ms-animation: fade 0.5s forwards;
   -o-animation: fade 0.5s forwards;
   animation: fade 0.5s forwards;
-  -webkit-animation-delay: 1.5s;
-  -moz-animation-delay: 1.5s;
-  -ms-animation-delay: 1.5s;
-  -o-animation-delay: 1.5s;
-  animation-delay: 1.5s;
+  -webkit-animation-delay: 1.2s;
+  -moz-animation-delay: 1.2s;
+  -ms-animation-delay: 1.2s;
+  -o-animation-delay: 1.2s;
+  animation-delay: 1.2s;
 }
