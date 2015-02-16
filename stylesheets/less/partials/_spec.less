@@ -52,14 +52,28 @@ section.hero {
   padding-top: 25px;
   background-color: white;
   #intro {
-    padding-top: 50px;
     opacity: 0;
+    @media (min-width: 400px) {
+      padding-top: 0;
+    }
+    @media (min-width: 750px) {
+      padding-top: 50px;
+    }
   }
   #intro-img {
     opacity: 0;
     svg {
       display: block;
       float: right;
+    }
+    @media (min-width: 400px) {
+      display: none;
+    }
+    @media (min-width: 750px) {
+      display: block;
+      svg {
+        width: 100%;
+      }
     }
   }
   h1 {
@@ -86,7 +100,12 @@ section#skills {
     color: @medium-grey;
   }
   ul.skill-listing {
-    .columns(3);
+    @media (min-width: 400px) {
+      .columns(1);
+    }
+    @media (min-width: 750px) {
+      .columns(3);
+    }
   }
 }
 

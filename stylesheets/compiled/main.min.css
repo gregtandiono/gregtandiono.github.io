@@ -124,8 +124,17 @@ section.hero {
   background-color: white;
 }
 section.hero #intro {
-  padding-top: 50px;
   opacity: 0;
+}
+@media (min-width: 400px) {
+  section.hero #intro {
+    padding-top: 0;
+  }
+}
+@media (min-width: 750px) {
+  section.hero #intro {
+    padding-top: 50px;
+  }
 }
 section.hero #intro-img {
   opacity: 0;
@@ -133,6 +142,19 @@ section.hero #intro-img {
 section.hero #intro-img svg {
   display: block;
   float: right;
+}
+@media (min-width: 400px) {
+  section.hero #intro-img {
+    display: none;
+  }
+}
+@media (min-width: 750px) {
+  section.hero #intro-img {
+    display: block;
+  }
+  section.hero #intro-img svg {
+    width: 100%;
+  }
 }
 section.hero h1 {
   font-weight: bold;
@@ -156,10 +178,19 @@ section#skills {
 section#skills h2 {
   color: #525252;
 }
-section#skills ul.skill-listing {
-  -webkit-columns: 3;
-  -moz-columns: 3;
-  columns: 3;
+@media (min-width: 400px) {
+  section#skills ul.skill-listing {
+    -webkit-columns: 1;
+    -moz-columns: 1;
+    columns: 1;
+  }
+}
+@media (min-width: 750px) {
+  section#skills ul.skill-listing {
+    -webkit-columns: 3;
+    -moz-columns: 3;
+    columns: 3;
+  }
 }
 g#react,
 g#nodejs,
