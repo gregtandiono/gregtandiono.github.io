@@ -7,11 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "grunt-markdown-to-json-with-content": "0.0.3",
+    "marked": "^0.3.3",
     "react": "*",
     "react-router": "*",
     "react-tools": "^0.12.0",
-    "snapsvg": "^0.3.0",
     "superagent": "^0.20.0",
+    "svg-injector": "^1.1.2",
     "underscore": "^1.7.0"
   },
   "devDependencies": {
@@ -23,7 +25,8 @@
     "grunt-contrib-less": "latest",
     "grunt-contrib-uglify": "^0.6.0",
     "grunt-contrib-watch": "latest",
-    "grunt-react": "latest"
+    "grunt-react": "latest",
+    "velocity-animate": "^1.2.1"
   },
   "author": "",
   "license": "ISC"

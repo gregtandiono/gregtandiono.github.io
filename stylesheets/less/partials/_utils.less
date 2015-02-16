@@ -1,0 +1,71 @@
+.horizontal-line-small {
+  display: block;
+  height: 5px;
+  background: @medium-grey;
+  opacity: .75;
+  width: 50px;
+}
+
+.separator {
+  width: 1px;
+  height: 20px;
+  background: @medium-grey;
+  vertical-align: middle;
+  margin: 0 15px 0 10px;
+  @media (min-width: 400px) {
+    display: none;
+  }
+  @media (min-width: 750px) {
+    display: inline-block;
+  }
+}
+
+.center-element {
+  display: block;
+  margin: 0 auto;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1
+  }
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1
+  }
+}
+
+@-moz-keyframes fade {
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1
+  }
+}
+
+@-o-keyframes fade {
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1
+  }
+}
+
