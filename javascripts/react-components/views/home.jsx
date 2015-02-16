@@ -1,5 +1,6 @@
 var React       = require('react')
   , svgInjector = require('svg-injector')
+  , marked      = require('marked')
   , _           = require('underscore');
 
 
@@ -8,7 +9,18 @@ var React       = require('react')
  */
 
 var Header = require('../ui-partials/_header.jsx')
-  , Hero   = require('../ui-partials/_hero.jsx');
+  , Hero   = require('../ui-partials/_hero.jsx')
+  , Footer = require('../ui-partials/_footer.jsx');
+
+
+/*
+ ** Load Content Data
+ */
+
+var contentData   = require('../../data/content.json')
+  , biographyData = _.first(contentData).biography.__content
+  , parsedBioData = marked(biographyData);
+
 
 
 var Home = React.createClass({
@@ -20,6 +32,7 @@ var Home = React.createClass({
         <main className='container'>
           <AboutMe />
         </main>
+        <Footer />
       </div>
     )
   }
@@ -29,16 +42,29 @@ var AboutMe = React.createClass({
   componentDidMount: function() {
     $('#skills').velocity(
       {opacity: 1, translateY: '-15px'},
-      {delay: 1500}
+      {delay: 1000}
     )
   },
   render: function() {
     return (
       <section id='skills'>
         <img id='me' src='/images/me.svg' className='center-element' />
-        <h2 className='text-align-center'>What I do.</h2>
+        <h2 className='text-align-center'>Me.</h2>
+        <Biography />
         <SkillSet />
       </section>
+    )
+  }
+});
+
+var Biography = React.createClass({
+  componentDidMount: function() {
+    $('#biography').html(parsedBioData);
+  },
+  render: function() {
+    return (
+      <div id='biography'>
+      </div>
     )
   }
 });

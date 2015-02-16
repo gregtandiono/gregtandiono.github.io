@@ -109,9 +109,17 @@ header ul li a {
   display: inline-block;
   padding: 0 10px;
 }
+footer .container {
+  border-top: 1px solid #eaeaea;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+footer p {
+  font-size: .75rem;
+  max-width: 350px;
+}
 section.hero {
   width: 100%;
-  background: #6C8084;
   padding-top: 25px;
   background-color: white;
 }
@@ -232,4 +240,9 @@ g#background {
   -ms-animation-delay: 1.2s;
   -o-animation-delay: 1.2s;
   animation-delay: 1.2s;
+}
+button.cta,
+a.cta {
+  font-size: 1.5rem;
+  max-width: 300px;
 }

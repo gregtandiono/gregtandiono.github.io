@@ -7,7 +7,9 @@ module.exports = React.createClass({
       <header>
         <div className='container'>
           <div className='u-pull-left logo'>
-            <img src='/images/logo.svg' />
+            <a href='/'>
+              <img src='/images/logo.svg' />
+            </a>
           </div>
           <div className='u-pull-right'>
             <Navigation />
@@ -21,7 +23,7 @@ module.exports = React.createClass({
 var Navigation = React.createClass({
   render: function() {
     var navigationLinks = [{
-      name: 'code & writings',
+      name: 'code & thoughts',
       url: '/blog'
     }, {
       name: 'let\'s collaborate',

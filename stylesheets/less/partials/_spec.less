@@ -35,9 +35,20 @@ header {
   }
 }
 
+footer {
+  .container {
+    border-top: 1px solid #eaeaea;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  p {
+    font-size: .75rem;
+    max-width: 350px;
+  }
+}
+
 section.hero {
   width: 100%;
-  background: #6C8084;
   padding-top: 25px;
   background-color: white;
   #intro {
@@ -118,4 +129,10 @@ g#react {
 g#background {
   .animation(fade .5s forwards);
   .animation-delay(1.2s);
+}
+
+button.cta,
+a.cta {
+  font-size: 1.5rem;
+  max-width: 300px;
 }
