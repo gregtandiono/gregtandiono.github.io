@@ -158,14 +158,14 @@ var Home = React.createClass({displayName: "Home",
         React.createElement(Header, null), 
         React.createElement(Hero, null), 
         React.createElement("main", {className: "container"}, 
-          React.createElement(Biography, null)
+          React.createElement(AboutMe, null)
         )
       )
     )
   }
 });
 
-var Biography = React.createClass({displayName: "Biography",
+var AboutMe = React.createClass({displayName: "AboutMe",
   componentDidMount: function() {
     $('#skills').velocity(
       {opacity: 1, translateY: '-15px'},
@@ -176,13 +176,89 @@ var Biography = React.createClass({displayName: "Biography",
     return (
       React.createElement("section", {id: "skills"}, 
         React.createElement("img", {id: "me", src: "/images/me.svg", className: "center-element"}), 
-        React.createElement("h2", {className: "text-align-center"}, "What I do.")
+        React.createElement("h2", {className: "text-align-center"}, "What I do."), 
+        React.createElement(SkillSet, null)
       )
     )
   }
 });
 
-React.render(React.createElement(Home, null), document.getElementById('app'))
+var skills = [{
+  type: 'Server-Side Development',
+  list: [
+    'Node/io',
+    'ExpressJs',
+    'Socket IO',
+    'Firebase',
+    'Ruby on Rails',
+    'Sinatra',
+    'Revel (Golang)',
+    'Postgres'
+  ]
+}, {
+  type: 'Client-Side Development',
+  list: [
+    'React',
+    'Flux',
+    'Angular',
+    'CommonJs (Browserify, RequireJs)',
+    'Grunt',
+    'Bower',
+    'VelocityJs (for animation)',
+    'Less/Stylus/Sass',
+    'CSS framework agnostic'
+  ]
+}, {
+  type: 'Preferred Tools',
+  list: [
+    'Jasmine',
+    'Jest (Jasmine wrapper for react tests)',
+    'Travis CI',
+    'Wercker CI',
+    'Capistrano for deployment',
+    'AWS (EC2, S3, RDS)',
+    'Ansible',
+    'I love ZSH',
+    'Git for version Control',
+    'I love VIM'
+  ]
+}, {
+  type: 'Design',
+  list: [
+    'Photoshop',
+    'Illustrator',
+    'Sketch 3'
+  ]
+}];
+
+var SkillSet = React.createClass({displayName: "SkillSet",
+  render: function() {
+    var skillListing = [];
+    _.each(skills, function(skill, index) {
+      var skillList = [];
+      _.map(skill.list, function(item) {
+        skillList.push(
+          React.createElement("li", null, item)
+        )
+      });
+      skillListing.push(
+        React.createElement("div", {className: "u-full-width"}, 
+          React.createElement("h3", null, skill.type), 
+          React.createElement("ul", {className: "skill-listing"}, 
+            skillList
+          )
+        )
+      )
+    });
+    return (
+      React.createElement("div", {className: "rows"}, 
+        skillListing
+      )
+    )
+  }
+});
+
+React.render(React.createElement(Home, null), document.getElementById('app'));
 
 },{"../ui-partials/_header.jsx":2,"../ui-partials/_hero.jsx":3,"react":152,"svg-injector":153,"underscore":154}],5:[function(require,module,exports){
 // shim for using process in browser

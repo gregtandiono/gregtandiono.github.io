@@ -27,7 +27,6 @@ header {
         text-decoration: none;
         text-transform: capitalize;
         font-size: 1.25rem;
-        /*color: white;*/
         color: @medium-grey;
         display: inline-block;
         padding: 0 10px;
@@ -55,6 +54,7 @@ section.hero {
   h1 {
     font-weight: bold;
     font-family: @heading-font;
+    font-size: 4.5rem;
     color: @medium-grey;
   }
   svg {
@@ -72,8 +72,10 @@ section#skills {
   margin-top: 65px;
   opacity: 0;
   h2 {
-    font-size: 3.5rem;
     color: @medium-grey;
+  }
+  ul.skill-listing {
+    .columns(3);
   }
 }
 
