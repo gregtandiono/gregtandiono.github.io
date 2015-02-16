@@ -30,7 +30,7 @@ var Navigation = React.createClass({
 
     var socialMediaLinks = [{
       iconClass: 'ion-social-twitter',
-      url: 'https://twitter.com/'
+      url: 'https://twitter.com/whuxleyvan'
     }, {
       iconClass: 'ion-social-octocat',
       url: 'https://github.com/gregtandiono'
